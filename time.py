@@ -1202,7 +1202,7 @@ async def handle_text_message(update: Update, context: ContextTypes.DEFAULT_TYPE
 def main():
     TOKEN = "8502835156:AAG5D1Zq3_QQawxOr9-kBdt-fz0L4LJcjyQ"
     
-    INITIAL_ADMIN_ID = None
+    INITIAL_ADMIN_ID = 6557052839
     
     if INITIAL_ADMIN_ID and not rental_data.admins:
         rental_data.add_admin(INITIAL_ADMIN_ID)
@@ -1245,4 +1245,5 @@ def main():
     application.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
 
 if __name__ == "__main__":
+
     main()
