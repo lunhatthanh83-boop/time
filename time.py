@@ -1438,9 +1438,10 @@ async def track_chat_members(update: Update, context: ContextTypes.DEFAULT_TYPE)
 def main():
     TOKEN = "8502835156:AAG5D1Zq3_QQawxOr9-kBdt-fz0L4LJcjyQ"
     
-    INITIAL_ADMIN_ID = "6557052839"  # Set your admin ID here if needed
+    INITIAL_ADMIN_ID = 6557052839  # Set your admin ID here (MUST BE INTEGER, NOT STRING!)
     
-    if INITIAL_ADMIN_ID and not rental_data.admins:
+    # Always add initial admin if specified and not already in list
+    if INITIAL_ADMIN_ID and INITIAL_ADMIN_ID not in rental_data.admins:
         rental_data.add_admin(INITIAL_ADMIN_ID)
         logger.info(f"Added initial admin: {INITIAL_ADMIN_ID}")
     
